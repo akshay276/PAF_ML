@@ -1,0 +1,47 @@
+{
+    "project": {
+        "name": "Predictive Analytics Framework",
+        "version": "1.0"
+    },
+    "database": {
+        "host": "localhost",
+        "port": 1521,
+        "service_name": "ORCLCDB",
+        "username": "username",
+        "password": "password",
+        "query": "SELECT * FROM CUSTOMER_ANALYTICS"
+    },
+    "dataset": {
+        "csv_path": "data/sample_data.csv",
+        "feature_columns": [
+            "Age",
+            "Gender",
+            "Income",
+            "Loan_Amount",
+            "Credit_Score",
+            "Account_Tenure"
+        ],
+        "target_column": "Delayed_Flag"
+    },
+    "training": {
+        "algorithm": "RandomForestClassifier",
+        "test_size": 0.2,
+        "random_seed": 42
+    },
+    "model": {
+        "model_path": "models/random_forest_model.pkl"
+    },
+    "logging": {
+        "log_path": "logs/paf.log",
+        "level": "INFO"
+    },
+    "future": {
+        "automl": false,
+        "mlflow": false,
+        "rest_api": false,
+        "scheduler": false,
+        "monitoring": false,
+        "model_registry": false,
+        "database_configuration": false
+    }
+}
